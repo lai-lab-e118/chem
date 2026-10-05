@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>藥品管理系統</title>
+<script>
+  // 藥品管理系統的 Apps Script 部署網址（結尾為 /exec）。
+  // 系統網址若有變更，只需要修改這一行，所有已貼上的 QR Code 都能繼續使用。
+  var APP_URL = 'https://script.google.com/macros/s/AKfycbzUm8vxRij_8VWKNSzn5KEP7GeFzKkAmFrI_7uHrMb25E8JZgjj5pd2iac4mzATRk-P/exec';
+
+  // 帶著 QR Code 中的瓶號（?b=E118-05-01）一起轉到系統
+  location.replace(APP_URL + location.search);
+</script>
+<style>
+  body { font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; text-align: center; padding: 48px 16px; color: #1e2a2f; }
+  a { color: #2f6f5e; }
+</style>
+</head>
+<body>
+  <p>正在開啟藥品管理系統…</p>
+  <p>若沒有自動開啟，請<a id="go">點此進入</a>。</p>
+  <script>document.getElementById('go').href = APP_URL + location.search;</script>
+</body>
+</html>
